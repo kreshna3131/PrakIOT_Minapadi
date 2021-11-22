@@ -1,0 +1,216 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap");
+
+body,
+button {
+  font-family: "Inter", sans-serif;
+}
+
+:root {
+  --offcanvas-width: 270px;
+  --topNavbarHeight: 56px;
+}
+
+.sidebar-nav {
+  width: var(--offcanvas-width);
+  background-color: #427255;
+}
+
+.sidebar-link {
+  display: flex;
+  align-items: center;
+}
+
+.sidebar-link .right-icon {
+  display: inline-flex;
+}
+
+.sidebar-link[aria-expanded="true"] .right-icon {
+  transform: rotate(180deg);
+}
+
+.side,
+#side {
+  color: white;
+}
+
+.navbar {
+  background-color: #4a805f;
+}
+
+a .navbar-brand {
+  color: white;
+}
+
+.carddata {
+  /* background-color: red; */
+  background-image: -moz-linear-gradient(90deg, #45b649 0%, #dce35b 100%);
+  background-image: -webkit-linear-gradient(90deg, #45b649 0%, #dce35b 100%);
+  background-image: -ms-linear-gradient(90deg, #45b649 0%, #dce35b 100%);
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+.overview-box .text {
+  font-weight: 300;
+  display: inline-block;
+}
+
+.overview-box .text-air {
+  align-items: center;
+  text-align: center;
+  font-weight: 500;
+  font-size: 80px;
+  display: inline-block;
+}
+
+.col a {
+  text-decoration: none;
+  color: white;
+  size: 30px
+}
+
+.overview-box .text h2 {
+  font-weight: 300;
+  color: #fff;
+  font-size: 70px;
+  line-height: 1;
+  margin-bottom: 5px;
+}
+
+.overview-item {
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  padding: 30px;
+  padding-bottom: 0;
+  -webkit-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.1);
+  margin-bottom: 40px;
+}
+
+.overview-box .icon {
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 15px;
+}
+
+.overview-box-air .icon {
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 15px;
+}
+
+.overview-box .icon i {
+  font-size: 60px;
+  color: #fff;
+}
+
+.overview-box-air .icon i {
+  font-size: 60px;
+  color: #fff;
+}
+
+.overview-item--c1 {
+  /* background-image: -moz-linear-gradient(90deg, #3f5efb 0%, #fc466b 100%); */
+  background-image: -webkit-linear-gradient(90deg, #3f5efb 0%, #fc466b 100%);
+  /* background-image: -ms-linear-gradient(90deg, #fcec0b 0%, #ED254E 100%); */
+}
+
+.overview-item--c2 {
+  /* background-image: -moz-linear-gradient(90deg, #11998e 0%, #ecef38 100%); */
+  background-image: -webkit-linear-gradient(90deg, #11998e 0%, #5291f0 100%);
+  /* background-image: -ms-linear-gradient(90deg, #11998e 0%, #38ef7d 100%); */
+}
+
+.overview-item--c3 {
+  /* background-image: -moz-linear-gradient(90deg, #ee0979 0%, #ff6a00 100%); */
+  background-image: -webkit-linear-gradient(90deg, #15e202 10%, #58c028 80%);
+  /* background-image: -ms-linear-gradient(90deg, #ee0979 0%, #ff6a00 100%); */
+}
+
+/* air */
+.overview-item--air {
+  background-image: -moz-linear-gradient(90deg, #01b7ff 10%, #2389ff 80%);
+  background-image: -webkit-linear-gradient(90deg, #01b7ff 10%, #87baf3 80%);
+  background-image: -ms-linear-gradient(90deg, #01b7ff 10%, #2389ff 80%);
+}
+
+.overview-chart {
+  height: 250px;
+  position: relative;
+}
+
+.overview-chart canvas {
+  width: 100%;
+}
+
+@media (min-width: 992px) {
+  body {
+    overflow: auto !important;
+  }
+
+  main {
+    margin-left: var(--offcanvas-width);
+  }
+
+  /* this is to remove the backdrop */
+  .offcanvas-backdrop::before {
+    display: none;
+  }
+
+  .sidebar-nav {
+    -webkit-transform: none;
+    transform: none;
+    visibility: visible !important;
+    height: calc(100% - var(--topNavbarHeight));
+    top: var(--topNavbarHeight);
+  }
+}
+
+.tambah a {
+  color: white;
+  text-decoration: none;
+  float: right;
+}
+
+.tambah {
+  color: white;
+  float: right;
+  margin-bottom: 15px;
+
+}
+
+/* modal */
+.modal-body {
+  background-color: white !important;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+.modal-header{
+  background-color: #b5c9bd;
+  height: 3px;
+}
+.modal-title{
+  color: white;
+}
+
+.modal-conten{
+  height: 8px;
+  background-color: aliceblue;
+}
+
+.box-2{
+  width: 500px;
+  padding: 30px;
+  position: absolute;
+  top: 135%;
+  transform: translate(-50%, -50%);
+}

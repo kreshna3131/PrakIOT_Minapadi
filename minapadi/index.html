@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" />
+  <link rel="stylesheet" href="css/dataTables.bootstrap5.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="mdi-font/css/material-design-iconic-font.css">
+  <link rel="stylesheet" href="mdi/css/materialdesignicons.css">
+  <link rel="stylesheet" href="mdi/css/materialdesignicons.min.css">
+  <link rel="stylesheet" href="mdi-font/css/material-design-iconic-font.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@6.4.95/css/materialdesignicons.min.css">
+  <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> -->
+  <title>MinaPadi</title>
+</head>
+
+<body>
+  <!-- top navigation bar -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebar" aria-controls="offcanvasExample">
+        <span class="navbar-toggler-icon" data-bs-target="#sidebar"></span>
+      </button>
+      <a class="navbar-brand me-auto ms-lg-0 ms-3 text-uppercase fw-bold" href="#" style="color: white;">MINAPADI</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#topNavBar" aria-controls="topNavBar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="topNavBar">
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle ms-2" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: white;">
+              <i class="bi bi-person-fill"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- top navigation bar -->
+  <!-- offcanvas -->
+  <div class="offcanvas offcanvas-start sidebar-nav" tabindex="-1" id="sidebar">
+    <div class="offcanvas-body p-0">
+      <nav class="navbar-light">
+        <ul class="navbar-nav">
+          <li>
+            <div class="side text-muted small fw-bold text-uppercase px-3">
+              <span class="side">Beranda</span>
+            </div>
+          </li>
+          <li>
+            <a href="index.html" class="side nav-link px-3 active">
+              <span class="mdi mdi-microsoft-xbox-controller-menu mdi-light"></span>
+              <span class="side">Dashboard</span>
+            </a>
+          </li>
+          <li class="side my-4">
+            <hr class="side dropdown-divider bg-light" />
+          </li>
+          <li>
+            <div class="side text-muted small fw-bold text-uppercase px-3 mb-3">
+              <span class="side">Menu Utama</span>
+            </div>
+          </li>
+          <li>
+            <a class="side nav-link px-3 sidebar-link" data-bs-toggle="collapse" href="#layouts">
+              <span class="side me-2"><i class="side bi bi-layout-split"></i></span>
+              <span class="side">Menu Utama</span>
+              <span class="side ms-auto">
+                <span class="side right-icon">
+                  <i class="side bi bi-chevron-down"></i>
+                </span>
+              </span>
+            </a>
+            <div class="side collapse" id="layouts">
+              <ul class="side navbar-nav ps-3">
+                <li>
+                  <a href="ikan1.html" class="side nav-link px-3">
+                    <span class="mdi mdi-fish mdi-light"></span>
+                    <span class="side">Ikan 1</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="side collapse" id="layouts">
+              <ul class="side navbar-nav ps-3">
+                <li>
+                  <a href="#" class="side nav-link px-3">
+                    <span class="mdi mdi-fish mdi-light"></span>
+                    <span class="side">Ikan 2</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <a href="#" class="side nav-link px-3">
+              <span class="mdi mdi-water mdi-light"></span>
+              <span class="side">Air</span>
+            </a>
+          </li>
+          <li class="side my-4">
+            <hr class="side dropdown-divider bg-light" />
+          </li>
+          <li>
+            <a href="keterangan.html" class="side nav-link px-3">
+              <span class="side me-2"><i class="side bi bi-graph-up"></i></span>
+              <span class="side">Keterangan</span>
+            </a>
+            <a href="login/login.php" class="side nav-link px-3">
+              <span class="side me-2"><i class="side bi bi-box-arrow-right"></i></span>
+              <span class="side">Logout</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+  <!-- offcanvas -->
+  <main class="mt-5 pt-3">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12">
+
+          <button type="button" class="btn btn-outline-success float-end mb-4 mr-4" data-bs-toggle="modal" data-bs-target="#modal">Tambah</button>
+          <h4>Dashboard </h4>
+          <div class="container mt-5">
+            <div class="modal" id="modal">
+              <div class="modal-dialog">
+                <div class="modal-body">
+                  <button type="button" class="btn-close float-end" data-bs-dismiss="modal"></button>
+                  <h5 class="modal-title">Tambah Data</h5>
+                  <form action="">
+                    <div class="mt-2">
+                      <label for="" class="form-label">Nama</label>
+                      <input type="text" class="form-control">
+                    </div>
+                    <div class="mt-2">
+                      <label for="" class="form-label">Suhu</label>
+                      <input type="text" class="form-control">
+                    </div>
+                    <div class="mt-2">
+                      <label for="" class="form-label">PH Air</label>
+                      <input type="text" class="form-control">
+                    </div>
+                    <div class="mt-2">
+                      <label for="" class="form-label">Tinggi Air</label>
+                      <input type="text" class="form-control">
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-primary">Simpan</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <a href="#ph" data-toggle="modal">
+            <div class="overview-item overview-item--c1">
+              <div class="overview__inner">
+                <div class="overview-box clearfix">
+                  <div class="icon">
+                    <span class="mdi mdi-ph mdi-48px" ></span>
+                  </div>
+                  <div class="text">
+                    <span>PH Air</span>
+                    <h2>7</h2>
+
+                  </div>
+                </div>
+                <div class="overview-chart">
+                  <canvas id="widgetChart"></canvas>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col">
+          <a href="#TinggiAir" data-toggle="modal">
+            <div class="overview-item overview-item--c2">
+              <div class="overview__inner">
+                <div class="overview-box clearfix">
+                  <div class="icon">
+                    <span class="mdi mdi-waves-arrow-up mdi-48px"></span> 
+                  </div>
+                  <div class="text">
+                    <span>Tinggi Air</span>
+                    <h2>20 cm</h2>
+
+                  </div>
+                </div>
+                <div class="overview-chart">
+                  <canvas id="widgetChart"></canvas>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col">
+          <a href="#SuhuAir" data-toggle="modal">
+            <div class="overview-item overview-item--c3">
+              <div class="overview__inner">
+                <div class="overview-box clearfix">
+                  <div class="icon">
+                  <span class="mdi mdi-thermometer-alert mdi-48px"></span>
+                  </div>
+                  <div class="text">
+                    <span>Suhu Air</span>
+                    <h2>7</h2>
+
+                  </div>
+                </div>
+                <div class="overview-chart">
+                  <canvas id="widgetChart"></canvas>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+    </div>
+
+    <div class="modal fade" id="ph" tabindex="-1" role="dialog" aria-labelledby="smallmodalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-sm" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="smallmodalLabel">PH Air</h5>
+                <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        								<span aria-hidden="true">&times;</span>
+        							</button> -->
+                <button type="button" class="btn-close float-end" data-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <form action="" method="post" style="margin-left: 10px;">
+                <p>PH Air Saat Ini
+                  <b>7</b>
+                </p>
+                <p>PH Air Normal Adalah
+                  <b>7</b>
+                </p>
+              </form>
+            </div>
+          </div>
+        </div>
+        </div>
+
+        <div class="modal fade" id="TinggiAir" tabindex="-1" role="dialog" aria-labelledby="smallmodalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-sm" role="document">
+            <div class="modal-content">
+              <div class="modal-header" id="header">
+                <h5 class="modal-title" id="smallmodalLabel">TinggiAir</h5>
+                <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                								<span aria-hidden="true">&times;</span>
+                							</button> -->
+                <button type="button" class="btn-close float-end" data-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <form action="" method="post" style="margin-left: 10px;">
+                <p>Suhu Air Saat Ini
+                  <b>7</b>
+                </p>
+                <p>Suhu Air Normal Adalah
+                  <b>7</b>
+                </p>
+              </form>
+            </div>
+          </div>
+        </div>
+        </div>
+
+            <div class="modal fade" id="SuhuAir" tabindex="-1" role="dialog" aria-labelledby="smallmodalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-sm" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="smallmodalLabel">Suhu Air</h5>
+                    <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            								<span aria-hidden="true">&times;</span>
+                            							</button> -->
+                    <button type="button" class="btn-close float-end" data-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <form action="" method="post" style="margin-left: 10px;">
+                    <p>Tinggi Air Saat Ini
+                      <b>7</b>
+                    </p>
+                    <p>Tinggi Air Normal Adalah
+                      <b>7</b>
+                    </p>
+                  </form>
+                </div>
+              </div>
+            </div>
+            </div>
+    
+  </main>
+  <script src="./js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@3.0.2/dist/chart.min.js"></script>
+  <script src="./js/jquery-3.5.1.js"></script>
+  <script src="./js/jquery.dataTables.min.js"></script>
+  <script src="./js/dataTables.bootstrap5.min.js"></script>
+  <script src="./js/script.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous">
+  </script>
+</body>
+
+</html>
