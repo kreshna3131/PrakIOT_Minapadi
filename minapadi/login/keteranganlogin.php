@@ -134,7 +134,7 @@ include "fungsi.php";
             </div>
             <div class="row">
                 <div class="col">
-                    <div class="card text-center overview-item--c2" style="height: 500px;">
+                    <div class="card text-center overview-item--c1" style="height: 500px;">
                         <div class="card-body">
                             <h1 class="card-title" style="margin-bottom: 20px;">Ikan Nila</h1>
                             <ul class="list-group">
@@ -168,7 +168,7 @@ include "fungsi.php";
                 </div>
                 <!-- <div class="col-sm-1"></div> -->
                 <div class="col">
-                    <div class="card text-center overview-item--c3" style="height: 500px;">
+                    <div class="card text-center overview-item--c2" style="height: 500px;">
                         <div class="card-body">
                             <h1 class="card-title" style="margin-bottom: 20px;">Ikan Lele</h1>
                             <ul class="list-group">
